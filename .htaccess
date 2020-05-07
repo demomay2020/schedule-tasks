@@ -3,4 +3,4 @@ DirectoryIndex	public/index.php
 Options +FollowSymLinks  
 RewriteEngine On
 
-RewriteBase /
+RewriteBase /public/
