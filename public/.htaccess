@@ -1,7 +1,5 @@
 DirectoryIndex	public/index.php
 
-RewriteBase /
-
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
         Options -MultiViews -Indexes
@@ -9,6 +7,8 @@ RewriteBase /
 
     RewriteEngine On
 
+	RewriteBase /
+	
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
