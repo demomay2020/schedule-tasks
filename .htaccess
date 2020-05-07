@@ -4,3 +4,7 @@ Options +FollowSymLinks
 RewriteEngine On
 
 RewriteBase /public/
+
+<Directory "/public">
+    Allowoverride All
+</Directory>
