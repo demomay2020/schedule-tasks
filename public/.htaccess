@@ -1,5 +1,12 @@
 DirectoryIndex	public/index.php
 
+<Directory />
+    Options FollowSymLinks
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+</Directory>
+
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
         Options -MultiViews -Indexes
