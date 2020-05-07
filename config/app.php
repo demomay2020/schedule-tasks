@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'https://schedule-tasks-may-2020.herokuapp.com'),
 
     'asset_url' => env('ASSET_URL', null),
 
