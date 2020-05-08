@@ -1,6 +1,11 @@
 DirectoryIndex	public/index.php
 
-RewriteBase /
+<Directory /public/>
+    Options FollowSymLinks
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+</Directory>
 
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
@@ -9,6 +14,8 @@ RewriteBase /
 
     RewriteEngine On
 
+	RewriteBase /
+	
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
