@@ -1,6 +1,6 @@
 DirectoryIndex public/index.php
 
-RewriteBase /
-
 RewriteEngine On
 RewriteRule ^(.*)$ public/$1 [L]
+
+RewriteBase /
