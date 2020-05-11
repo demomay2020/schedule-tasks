@@ -51,7 +51,7 @@
                 startDate: new Date(), 
                 daysOfWeekDisabled: [0,6],
             }).on('changeDate', function(e) {
-                alert(2222);
+                
                 var curdate = e.format('yyyy-mm-dd');
                 $('#chosen_date').val(curdate);
                 $('#schedule_area').html('');
@@ -59,7 +59,8 @@
                 $('#schedule_area').html('Loading.....');
                 $('#schedule_area').show('slow');
                 $('#continueDiv').hide();
-                $.get("/schedule/check/" + curdate,
+                //$.get("/schedule/check/" + curdate,
+                $.get({{route('schedule.check',['date'=>curdate])}},
                 {
                   
                 },
