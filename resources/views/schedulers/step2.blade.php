@@ -59,8 +59,8 @@
                 $('#schedule_area').html('Loading.....');
                 $('#schedule_area').show('slow');
                 $('#continueDiv').hide();
-                $.get("{{route('schedule.check',['date'=>" + curdate + "])}}",
-                //$.get("/schedule/check/" + curdate,
+                
+                $.get("/schedule/check/" + curdate,
                 {
                   
                 },
