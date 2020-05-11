@@ -14,7 +14,7 @@
     <div class="row">
         <div class="col-md-5 ml-30">
             @foreach($all_event_types as $val)
-                <a href="/schedule/step2/{{base64_encode($val->id)}}" style="text-decoration: none;color:#777;">
+                <a href="{{route('schedule.step2',['event'=>base64_encode($val->id)])}}" style="text-decoration: none;color:#777;">
                     <div class="panel panel-default">
                         <div class="panel-body">
                             <span class="fa-stack fa-lg">
