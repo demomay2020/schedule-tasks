@@ -45,6 +45,13 @@
 
 <script type="text/javascript">
     
+    var furl = window.location.pathname;
+    var arr = furl.split('/');
+    var append_link = '';
+    if(arr[1] === 'public'){
+        append_link = '/'+arr[1]+'/'+arr[2];
+    }
+    
     $(document).ready(function() {
         $("#datepicker").datepicker(
             { 
@@ -60,7 +67,7 @@
                 $('#schedule_area').show('slow');
                 $('#continueDiv').hide();
                 
-                $.get("/schedule/check/" + curdate,
+                $.get(append_link + "/schedule/check/" + curdate,
                 {
                   
                 },
@@ -74,7 +81,7 @@
     
     function choose_the_time(ts){
         $('#continueDiv').show();
-        $('#step2Form').attr('action', "/schedule/step3/" + btoa(ts + '#' + '{{ $event_id }}'));        
+        $('#step2Form').attr('action', append_link + "/schedule/step3/" + btoa(ts + '#' + '{{ $event_id }}'));        
         $('#continueBtn').removeClass('btn-default').addClass('btn-primary');
    }
     
