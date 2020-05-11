@@ -12,7 +12,7 @@
         
         
         <div class="col-sm-6">
-            <strong>My Link :</strong> <br><a href="{route('schedule.step1',['booking_url'=>Auth::user()->booking_url)}">
+            <strong>My Link :</strong> <br><a href="{{route('schedule.step1',['booking_url'=>Auth::user()->booking_url)}}">
 			{{ Auth::user()->booking_url }}</a>
         </div>
 
