@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'https://schedule-tasks-may-2020.herokuapp.com'),
+    'url' => env('APP_URL', 'https://www.vtally.com/schedule_events_live'),
 
     'asset_url' => env('ASSET_URL', null),
 

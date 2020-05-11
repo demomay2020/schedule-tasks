@@ -17,7 +17,8 @@ class SchedulerController extends Controller
     
     public function __construct() {
         
-        $cu_route = Route::getCurrentRoute()->getActionName();
+        //$cu_route = Route::getCurrentRoute()->getActionName();
+        $cu_route="";
         $route_details = explode('@',$cu_route);        
         $action=$route_details[1];       
         if($action == "display" && Auth::guest()){
