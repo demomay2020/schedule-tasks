@@ -9,7 +9,7 @@
         <div class="col-md-5">
 
             <p>
-                <a href="/schedule/step2/{{base64_encode($event_details->id)}}"><i class="fa fa-arrow-left fa-2x t-info" aria-hidden="true"></i></a>
+                <a href="{{route('schedule.step2',['event'=>base64_encode($event_details->id)]])}}"><i class="fa fa-arrow-left fa-2x t-info" aria-hidden="true"></i></a>
             </p>
             <br>
 
