@@ -24,7 +24,7 @@
             </div>
 
             <div class="col-sm-3" id="schedule_area" style="height: 315px;display:none;">
-                Loading......
+                Loading.....
             </div>
         </div>    
     </div>
