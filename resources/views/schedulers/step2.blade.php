@@ -7,7 +7,7 @@
         <div class="col-sm-10 col-centered">
             <div class="col-sm-3">           
                 <p>
-                    <a href="/schedule/step1/{{Session::get('organiser_details')['booking_url']}}"><i class="fa fa-arrow-left fa-2x t-info" aria-hidden="true"></i></a>
+                    <a href="{{route('schedule.step1',['booking_url'=>Session::get('organiser_details')['booking_url']])}}"><i class="fa fa-arrow-left fa-2x t-info" aria-hidden="true"></i></a>
                 </p>
                 <br>
                 <!--<div style="text-align: center">-->
@@ -59,7 +59,7 @@
                 $('#schedule_area').html('Loading.....');
                 $('#schedule_area').show('slow');
                 $('#continueDiv').hide();
-                $.get("/schedule/check/" + curdate,
+                $.get("{{route('schedulecheck',['date']=>curdate)}}",
                 {
                   
                 },
