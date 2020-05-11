@@ -60,7 +60,7 @@
                 $('#schedule_area').show('slow');
                 $('#continueDiv').hide();
                 //$.get("/schedule/check/" + curdate,
-                $.get({{route('schedule.check',['date'=>curdate])}},
+                $.get("{{route('schedule.check',['date'=>curdate])}}",
                 {
                   
                 },
