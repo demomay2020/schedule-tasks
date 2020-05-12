@@ -55,16 +55,20 @@ class EventController extends Controller
             Event::updateOrCreate(
                 ['id' => $request->id],
                 ['event_name' => $request->event_name, 'event_duration' => $request->event_duration,'user_id'=>Auth::id()]
-            );              
+            );
+            $flash_msg = 'Event has been modified';
+            $redirect_url = '/event/edit/'.$request->id;
         }else{
             Event::create([
                 'event_name' => $request->event_name,
                 'event_duration' => $request->event_duration,
                 'user_id'=>Auth::id()
             ]);
+            $flash_msg = 'Event has been added';
+            $redirect_url = '/event/add';
         }
-        session()->flash('msg','Event has been added');        
-        return redirect('/event/add');
+        session()->flash('msg',$flash_msg);        
+        return redirect($redirect_url);
     }
     
     public function destroy($id){
