@@ -54,13 +54,13 @@ class EventController extends Controller
         if($request->id){
             Event::updateOrCreate(
                 ['id' => $request->id],
-                ['event_name' => $request->event_name, 'event_duration' => $request->event_duration,'user_id'=>Session::get('_user_id')]
+                ['event_name' => $request->event_name, 'event_duration' => $request->event_duration,'user_id'=>Auth::id()]
             );              
         }else{
             Event::create([
                 'event_name' => $request->event_name,
                 'event_duration' => $request->event_duration,
-                'user_id'=>Session::get('_user_id')
+                'user_id'=>Auth::id()
             ]);
         }
         session()->flash('msg','Event has been added');        
