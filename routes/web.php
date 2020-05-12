@@ -17,7 +17,7 @@
 
 Auth::routes();
 
-Route::get('/event/display','EventController@display')->name('event.dislpay');
+Route::get('/event/display','EventController@display')->name('event.display');
 
 
 //Route::auth();
