@@ -65,7 +65,7 @@
                 
             <div class="panel-footer">
                 <div class="text-right">                
-                    <a href="{{route('event.display'))}}" class="btn btn-md btn-default"> Cancel </a>
+                    <a href="{{route('event.display')}}" class="btn btn-md btn-default"> Cancel </a>
                     <input type="submit" class="btn btn-md btn-info" value="Save"/>
                 </div>
             </div>    
