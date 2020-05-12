@@ -38,7 +38,7 @@ Route::post('/schedule/create','SchedulerController@store')->name('schedule.crea
 
 Route::get('/schedule/confirm','SchedulerController@confirm')->name('schedule.confirm');
         
-Route::get('/schedule/display/{filter?}','SchedulerController@display')->name('schedule.dislpay');
+Route::get('/schedule/display/{filter?}','SchedulerController@display')->name('schedule.display');
 
 Route::get('/schedule/check/{date}','SchedulerController@check')->name('schedule.check');
 
