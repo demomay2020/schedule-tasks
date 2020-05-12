@@ -198,7 +198,7 @@ class SimpleMessage
     public function action($text, $url)
     {
         $this->actionText = $text;
-        $this->actionUrl = str_replace('password/reset','public/index.php/password/reset',$url);
+        $this->actionUrl = $url;
 
         return $this;
     }
@@ -218,7 +218,7 @@ class SimpleMessage
             'introLines' => $this->introLines,
             'outroLines' => $this->outroLines,
             'actionText' => $this->actionText,
-            'actionUrl' => $this->actionUrl,
+            'actionUrl' => str_replace('password/reset','public/index.php/password/reset',$this->actionUrl)
         ];
     }
 }
