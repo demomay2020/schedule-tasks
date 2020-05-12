@@ -9,8 +9,8 @@
         
         @if(count($group_by_dates) > 0 )
         
-            <a href="/schedule/display/upcoming/" class="btn btn-primary" tabindex="-1" role="button" aria-disabled="true">Upcoming</a>
-            <a href="/schedule/display/past/" class="btn btn-default" tabindex="-1" role="button" aria-disabled="true">Past</a>
+            <a href="{{route('schedule.display',['filter'=>'upcoming'])}}" class="btn btn-primary" tabindex="-1" role="button" aria-disabled="true">Upcoming</a>
+            <a href="{{route('schedule.display',['filter'=>'past'])}}" class="btn btn-default" tabindex="-1" role="button" aria-disabled="true">Past</a>
             <br/><br/>
         
                 @foreach($group_by_dates as $key=>$value)
