@@ -53,7 +53,3 @@ Route::post('/event/create','EventController@store')->name('event.create');
 Route::delete('/event/delete/{event}','EventController@destroy')->name('event.destroy');
 
 //Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('password/reset',function() {
-   return redirect()->route('public/index.php/password/reset');
-});
