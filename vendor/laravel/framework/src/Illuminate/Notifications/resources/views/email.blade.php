@@ -27,8 +27,11 @@
         default:
             $color = 'primary';
     }
+    
+    $actionUrl = str_replace('password/reset','public/index.php/password/reset',$actionUrl);
+    
 ?>
-@component('mail::button', ['url' => str_replace('password/reset','public/index.php/password/reset',$actionUrl), 'color' => $color])
+@component('mail::button', ['url' => $actionUrl, 'color' => $color])
 {{ $actionText }}
 @endcomponent
 @endisset
