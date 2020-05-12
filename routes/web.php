@@ -44,8 +44,6 @@ Route::get('/schedule/check/{date}','SchedulerController@check')->name('schedule
 
 # Event routes
 
-Route::get('/event/display','EventController@display')->name('event.dislpay');
-
 Route::get('/event/add','EventController@add')->name('event.add');
 
 Route::get('/event/edit/{event}','EventController@add')->name('event.edit');
