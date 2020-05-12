@@ -39,7 +39,7 @@ class RouteServiceProvider extends ServiceProvider
 
         $this->mapWebRoutes();
 
-        //
+        $this->removeIndexPhpFromUrl(); // added on 12 May
     }
 
     /**
@@ -70,4 +70,17 @@ class RouteServiceProvider extends ServiceProvider
              ->namespace($this->namespace)
              ->group(base_path('routes/api.php'));
     }
+    
+    protected function removeIndexPhpFromUrl()
+    {
+        if (Str::contains(request()->getRequestUri(), '/public/index.php/')) {
+            $url = str_replace('public/index.php/', '', request()->getRequestUri());
+
+            if (strlen($url) > 0) {
+                header("Location: $url", true, 301);
+                exit;
+            }
+        }
+    }
+    
 }
