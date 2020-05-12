@@ -218,7 +218,7 @@ class SimpleMessage
             'introLines' => $this->introLines,
             'outroLines' => $this->outroLines,
             'actionText' => $this->actionText,
-            'actionUrl' => str_replace('password/reset','public/index.php/password/reset',$this->actionUrl)
+            'actionUrl' => $this->actionUrl,
         ];
     }
 }
