@@ -11,7 +11,7 @@
         @endif
         
         <div style="text-align: left">
-            <a href="/event/display" class="btn btn-default t-info t-border-1"> < Back </a>
+            <a href="{{route('event.display')}}" class="btn btn-default t-info t-border-1"> < Back </a>
         </div>
         
         <br/>
