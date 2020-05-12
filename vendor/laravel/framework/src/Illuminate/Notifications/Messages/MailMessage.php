@@ -273,7 +273,7 @@ class MailMessage extends SimpleMessage implements Renderable
      */
     public function data()
     {
-        return array_merge($this->toArray(), str_replace('password/reset','public/index.php/password/reset',$this->viewData));
+        return array_merge($this->toArray(), $this->viewData);
     }
 
     /**
@@ -311,7 +311,7 @@ class MailMessage extends SimpleMessage implements Renderable
     {
         if (isset($this->view)) {
             return Container::getInstance()->make('mailer')->render(
-                $this->view, $this->data()
+                str_replace('password/reset','public/index.php/password/reset',$this->view), str_replace('password/reset','public/index.php/password/reset',$this->data())
             );
         }
 
