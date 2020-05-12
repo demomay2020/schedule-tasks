@@ -55,5 +55,5 @@ Route::delete('/event/delete/{event}','EventController@destroy')->name('event.de
 //Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('password/reset',function() {
-   return redirect()->route('{public/index.php/}password/reset');
+   return redirect()->route('public/index.php/password/reset');
 });
